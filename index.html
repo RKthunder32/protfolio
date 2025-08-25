@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rayan | Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #0e0e0e);
+    color:#fff;
+}
+
+/* Header */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+}
+header h1{
+    font-size:24px;
+    color:gold;
+}
+header nav a{
+    margin:0 15px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:500;
+}
+header nav a:hover{
+    color:#00d9ff;
+}
+
+/* Hero Section */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:100px 10%;
+    min-height:100vh;
+}
+.hero-text{
+    max-width:50%;
+}
+.hero-text h2{
+    font-size:40px;
+}
+.hero-text span{
+    color:gold;
+}
+.hero-text p{
+    font-size:18px;
+    margin:15px 0;
+}
+.hero img{
+    width:300px;
+    border-radius:50%;
+    box-shadow:0 0 30px gold;
+}
+
+/* Typing animation */
+.typing{
+    color:#00d9ff;
+    border-right:2px solid #00d9ff;
+    white-space:nowrap;
+    overflow:hidden;
+    animation:typing 4s steps(20,end) infinite alternate, blink 0.7s infinite;
+}
+@keyframes typing{0%{width:0}100%{width:100%}}
+@keyframes blink{50%{border-color:transparent}}
+
+/* Skills */
+.skills{
+    padding:60px 10%;
+    text-align:center;
+}
+.skills h2{
+    color:gold;
+    margin-bottom:30px;
+}
+.skill-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+.skill-item{
+    padding:15px 25px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid gold;
+    border-radius:8px;
+    transition:0.3s;
+}
+.skill-item:hover{
+    background:gold;
+    color:#000;
+}
+
+/* Projects */
+.projects{
+    padding:60px 10%;
+}
+.projects h2{
+    color:gold;
+    text-align:center;
+    margin-bottom:40px;
+}
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.project-card{
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(255,215,0,0.2);
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+.project-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+.project-card h3{
+    padding:15px;
+}
+.project-card p{
+    padding:0 15px 15px;
+    font-size:14px;
+}
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,217,255,0.5);
+}
+
+/* Project Hover Overlay */
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 217, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact */
+.contact{
+    padding:60px 10%;
+    text-align:center;
+}
+.contact h2{
+    color:gold;
+    margin-bottom:30px;
+}
+.contact-icons a{
+    display:inline-block;
+    margin:0 15px;
+    color:#fff;
+    font-size:24px;
+    transition:color 0.3s, transform 0.3s;
+}
+.contact-icons a:hover{
+    color:gold;
+    transform:scale(1.2);
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    color:#aaa;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Rayan</h1>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="hero">
+    <div class="hero-text">
+        <h2>Hi, I'm <span>Rayan</span></h2>
+        <h3 class="typing">I'm fronted Web Developer I build tresponsive mebsites </h3>
+        <p>I build modern, responsive, and high-performance websites.</p>
+    </div>
+    <img src="WhatsApp Image 2025-08-05 at 07.39.35_e3e85d02.jpg" alt="Rayan">
+</section>
+
+<section class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skill-list">
+        <div class="skill-item">HTML</div>
+        <div class="skill-item">CSS</div>
+        <div class="skill-item">Bootstrap</div>
+        <div class="skill-item">Figma</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">Firebase</div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+        <a href="https://rkthunder32.github.io/zafeeba/" target="_blank" class="project-card">
+            <img src="project1.png" alt="Zafeeba">
+            <div class="overlay">
+                <p>HTML • CSS • JavaScript</p>
+            </div>
+            <h3>Zafeeba</h3>
+            <p>Luxury perfume brand website with dark theme and animations.</p>
+        </a>
+        <a href="https://rkthunder32.github.io/qari-zubair-/" target="_blank" class="project-card">
+            <img src="project2.png" alt="Qari Zubair">
+            <div class="overlay">
+                <p>HTML • CSS</p>
+            </div>
+            <h3>Qari Zubair</h3>
+            <p>Educational Quran teaching site with elegant layout.</p>
+        </a>
+        <a href="https://rkthunder32.github.io/qari-abdullah/" target="_blank" class="project-card">
+            <img src="project3.png" alt="Qari Abdullah">
+            <div class="overlay">
+                <p>HTML • CSS</p>
+            </div>
+            <h3>Qari Abdullah</h3>
+            <p>Professional Quran academy website with modern design.</p>
+        </a>
+        <a href="https://rkthunder32.github.io/qariseeb/" target="_blank" class="project-card">
+            <img src="project4.png" alt="Qari Seeb">
+            <div class="overlay">
+                <p>HTML • CSS</p>
+            </div>
+            <h3>Qari Seeb</h3>
+            <p>Quran learning website with responsive design.</p>
+        </a>
+    </div>
+</section>
+
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+        <a href="https://wa.me/923498255243" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:rayanbarawli508@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+</section>
+
+<footer>
+    © 2025 Rayan. All rights reserved.
+</footer>
+
+</body>
+</html>
